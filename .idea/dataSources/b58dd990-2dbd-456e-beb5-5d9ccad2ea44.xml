@@ -1,0 +1,2874 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.1">
+    <root id="1"/>
+    <schema id="2" parent="1" name="crm">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="mysql"/>
+    <schema id="5" parent="1" name="performance_schema"/>
+    <schema id="6" parent="1" name="sakila"/>
+    <schema id="7" parent="1" name="sys"/>
+    <table id="8" parent="2" name="active_consumer_struct">
+      <Comment>活跃客户分析结构树</Comment>
+    </table>
+    <table id="9" parent="2" name="activity">
+      <Comment>活动计划表</Comment>
+    </table>
+    <table id="10" parent="2" name="activity_page">
+      <Comment>活动页面表</Comment>
+    </table>
+    <table id="11" parent="2" name="activity_picture">
+      <Comment>活动图片表</Comment>
+    </table>
+    <table id="12" parent="2" name="activity_push"/>
+    <table id="13" parent="2" name="activity_push_result">
+      <Comment>活动推送结果报表</Comment>
+    </table>
+    <table id="14" parent="2" name="all_consumer_struct">
+      <Comment>所有客户分析结构树</Comment>
+    </table>
+    <table id="15" parent="2" name="apg">
+      <Comment>货价组别</Comment>
+    </table>
+    <table id="16" parent="2" name="cat">
+      <Comment>版别</Comment>
+    </table>
+    <table id="17" parent="2" name="company">
+      <Comment>公司表</Comment>
+    </table>
+    <table id="18" parent="2" name="consumer">
+      <Comment>客户表</Comment>
+    </table>
+    <table id="19" parent="2" name="consumer_ext">
+      <Comment>会员扩展表</Comment>
+    </table>
+    <table id="20" parent="2" name="crowd_rule">
+      <Comment>人群信息规则表
+</Comment>
+    </table>
+    <table id="21" parent="2" name="department">
+      <Comment>部门表</Comment>
+    </table>
+    <table id="22" parent="2" name="mc"/>
+    <table id="23" parent="2" name="member_analysis">
+      <Comment>会员统计表</Comment>
+    </table>
+    <table id="24" parent="2" name="order"/>
+    <table id="25" parent="2" name="order_info">
+      <Comment>商品订单详情</Comment>
+    </table>
+    <table id="26" parent="2" name="output_management">
+      <Comment>人群导出管理</Comment>
+    </table>
+    <table id="27" parent="2" name="product"/>
+    <table id="28" parent="2" name="product_back_cycle">
+      <Comment>商品回购周期分析的中间表</Comment>
+    </table>
+    <table id="29" parent="2" name="product_category">
+      <Comment>商品类目分析表</Comment>
+    </table>
+    <table id="30" parent="2" name="product_embedded_joint">
+      <Comment>商品内页连带优化分析的中间表</Comment>
+    </table>
+    <table id="31" parent="2" name="product_sale_joint">
+      <Comment>商品销售连带分析的中间表</Comment>
+    </table>
+    <table id="32" parent="2" name="product_visitor_value"/>
+    <table id="33" parent="2" name="promotion_analysis">
+      <Comment>店铺促销手段分析表</Comment>
+    </table>
+    <table id="34" parent="2" name="rfm_module">
+      <Comment>rfm模块分析暂存表，包括r值分析，f值分析，m值分析，rfm模型分析，回购周期分析</Comment>
+    </table>
+    <table id="35" parent="2" name="role">
+      <Comment>角色表</Comment>
+    </table>
+    <table id="36" parent="2" name="sale_analysis">
+      <Comment>销售分析结构树</Comment>
+    </table>
+    <table id="37" parent="2" name="shop">
+      <Comment>店铺表</Comment>
+    </table>
+    <table id="38" parent="2" name="user">
+      <Comment>用户表</Comment>
+    </table>
+    <table id="39" parent="2" name="user_department_mapping">
+      <Comment>用户-组织映射表</Comment>
+    </table>
+    <table id="40" parent="2" name="user_role_mapping">
+      <Comment>用户-角色映射表</Comment>
+    </table>
+    <table id="41" parent="2" name="user_t"/>
+    <column id="42" parent="8" name="id">
+      <Position>1</Position>
+      <DataType>int(11) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="43" parent="8" name="shop_id">
+      <Position>2</Position>
+      <Comment>商店id</Comment>
+      <DataType>int(11) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="44" parent="8" name="r_value">
+      <Position>3</Position>
+      <Comment>r值</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="45" parent="8" name="end_time">
+      <Position>4</Position>
+      <Comment>分析截止时间</Comment>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="46" parent="8" name="consumer_num">
+      <Position>5</Position>
+      <Comment>客户数量</Comment>
+      <DataType>int(11)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="47" parent="8" name="turnover">
+      <Position>6</Position>
+      <Comment>成交额</Comment>
+      <DataType>double(20,2)|0</DataType>
+      <DefaultExpression>&apos;0.00&apos;</DefaultExpression>
+    </column>
+    <column id="48" parent="8" name="ave_turnover">
+      <Position>7</Position>
+      <Comment>人均成交额</Comment>
+      <DataType>double(20,2)|0</DataType>
+      <DefaultExpression>&apos;0.00&apos;</DefaultExpression>
+    </column>
+    <column id="49" parent="8" name="repeat_rate">
+      <Position>8</Position>
+      <Comment>重复购买率</Comment>
+      <DataType>double(20,4)|0</DataType>
+      <DefaultExpression>&apos;0.0000&apos;</DefaultExpression>
+    </column>
+    <column id="50" parent="8" name="repeat_consumer_num">
+      <Position>9</Position>
+      <Comment>重复消费人数</Comment>
+      <DataType>int(11)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="51" parent="8" name="repeat_turnover">
+      <Position>10</Position>
+      <Comment>重复购买金额</Comment>
+      <DataType>double(20,2)|0</DataType>
+      <DefaultExpression>&apos;0.00&apos;</DefaultExpression>
+    </column>
+    <column id="52" parent="8" name="key">
+      <Position>11</Position>
+      <Comment>节点关键标识</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="53" parent="8" name="parent_key">
+      <Position>12</Position>
+      <Comment>父节点关键标识</Comment>
+      <DataType>int(11) unsigned|0</DataType>
+    </column>
+    <column id="54" parent="8" name="consumer_ids">
+      <Position>13</Position>
+      <Comment>客户id列表</Comment>
+      <DataType>mediumtext|0</DataType>
+    </column>
+    <column id="55" parent="8" name="rate">
+      <Position>14</Position>
+      <Comment>客户人数占父节点的比例</Comment>
+      <DataType>double(20,2)|0</DataType>
+      <DefaultExpression>&apos;0.00&apos;</DefaultExpression>
+    </column>
+    <index id="56" parent="8" name="shop_id">
+      <ColNames>shop_id</ColNames>
+    </index>
+    <key id="57" parent="8" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="58" parent="8" name="active_consumer_struct_ibfk_1">
+      <ColNames>shop_id</ColNames>
+      <RefSchemaName>crm</RefSchemaName>
+      <RefTableName>shop</RefTableName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <column id="59" parent="9" name="id">
+      <Position>1</Position>
+      <DataType>int(11) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="60" parent="9" name="name">
+      <Position>2</Position>
+      <Comment>活动名称</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="61" parent="9" name="company_id">
+      <Position>3</Position>
+      <Comment>公司id</Comment>
+      <DataType>int(11) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="62" parent="9" name="company_name">
+      <Position>4</Position>
+      <Comment>公司名</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="63" parent="9" name="shop_id_list">
+      <Position>5</Position>
+      <Comment>多家店铺id</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="64" parent="9" name="activity_no">
+      <Position>6</Position>
+      <Comment>活动编号</Comment>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="65" parent="9" name="submitter">
+      <Position>7</Position>
+      <Comment>提交人</Comment>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="66" parent="9" name="submit_time">
+      <Position>8</Position>
+      <Comment>提交时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="67" parent="9" name="applicant">
+      <Position>9</Position>
+      <Comment>申请人</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="68" parent="9" name="leader">
+      <Position>10</Position>
+      <Comment>负责人</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="69" parent="9" name="begin_date">
+      <Position>11</Position>
+      <Comment>活动开始时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="70" parent="9" name="end_date">
+      <Position>12</Position>
+      <Comment>活动结束时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="71" parent="9" name="objective">
+      <Position>13</Position>
+      <Comment>活动目的</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="72" parent="9" name="have_gift">
+      <Position>14</Position>
+      <Comment>是否有赠品</Comment>
+      <DataType>bit(1)|0</DataType>
+    </column>
+    <column id="73" parent="9" name="expect_kpi">
+      <Position>15</Position>
+      <Comment>预期KPI</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="74" parent="9" name="file">
+      <Position>16</Position>
+      <Comment>活动方案/文档</Comment>
+      <DataType>text|0</DataType>
+    </column>
+    <column id="75" parent="9" name="audit_state">
+      <Position>17</Position>
+      <Comment>审核状态（0审核中，1审核通过，2审核拒绝/未通过）</Comment>
+      <DataType>int(2)|0</DataType>
+    </column>
+    <column id="76" parent="9" name="auditor">
+      <Position>18</Position>
+      <Comment>审核人</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="77" parent="9" name="audit_time">
+      <Position>19</Position>
+      <Comment>审核时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="78" parent="9" name="audit_remark">
+      <Position>20</Position>
+      <Comment>审核人意见/备注</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="79" parent="9" name="remark">
+      <Position>21</Position>
+      <Comment>备注</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="80" parent="9" name="state">
+      <Position>22</Position>
+      <Comment>是否删除（0正常，1删除）</Comment>
+      <DataType>bit(1)|0</DataType>
+    </column>
+    <key id="81" parent="9" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="82" parent="10" name="id">
+      <Position>1</Position>
+      <DataType>int(11) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="83" parent="10" name="activity_id">
+      <Position>2</Position>
+      <Comment>活动id（对应Activity表的id）</Comment>
+      <DataType>int(11) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="84" parent="10" name="company_id">
+      <Position>3</Position>
+      <Comment>公司id</Comment>
+      <DataType>int(11) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="85" parent="10" name="name">
+      <Position>4</Position>
+      <Comment>活动名称</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="86" parent="10" name="page_link">
+      <Position>5</Position>
+      <Comment>页面地址</Comment>
+      <DataType>text|0</DataType>
+    </column>
+    <column id="87" parent="10" name="description">
+      <Position>6</Position>
+      <Comment>文字描述</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="88" parent="10" name="file">
+      <Position>7</Position>
+      <Comment>活动方案/文档</Comment>
+      <DataType>text|0</DataType>
+    </column>
+    <column id="89" parent="10" name="submitter">
+      <Position>8</Position>
+      <Comment>提交人</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="90" parent="10" name="submit_time">
+      <Position>9</Position>
+      <Comment>提交时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="91" parent="10" name="audit_state">
+      <Position>10</Position>
+      <Comment>审核状态（0审核中，1审核通过，2审核拒绝/未通过）</Comment>
+      <DataType>int(2)|0</DataType>
+    </column>
+    <column id="92" parent="10" name="auditor">
+      <Position>11</Position>
+      <Comment>审核人</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="93" parent="10" name="audit_time">
+      <Position>12</Position>
+      <Comment>审核时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="94" parent="10" name="audit_remark">
+      <Position>13</Position>
+      <Comment>审核人意见/备注</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="95" parent="10" name="remark">
+      <Position>14</Position>
+      <Comment>备注</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="96" parent="10" name="state">
+      <Position>15</Position>
+      <Comment>是否删除（0正常，1删除）</Comment>
+      <DataType>bit(1)|0</DataType>
+    </column>
+    <key id="97" parent="10" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="98" parent="11" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="99" parent="11" name="activity_id">
+      <Position>2</Position>
+      <Comment>活动id（对应Activity表的id）</Comment>
+      <DataType>int(11) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="100" parent="11" name="company_id">
+      <Position>3</Position>
+      <Comment>公司id</Comment>
+      <DataType>int(11) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="101" parent="11" name="name">
+      <Position>4</Position>
+      <Comment>活动名称</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="102" parent="11" name="picture">
+      <Position>5</Position>
+      <Comment>活动图片</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="103" parent="11" name="submitter">
+      <Position>6</Position>
+      <Comment>提交人</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="104" parent="11" name="submit_time">
+      <Position>7</Position>
+      <Comment>提交时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="105" parent="11" name="audit_state">
+      <Position>8</Position>
+      <Comment>审核状态（0审核中，1审核通过，2审核拒绝/未通过）</Comment>
+      <DataType>int(2)|0</DataType>
+    </column>
+    <column id="106" parent="11" name="auditor">
+      <Position>9</Position>
+      <Comment>审核人</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="107" parent="11" name="audit_time">
+      <Position>10</Position>
+      <Comment>审核时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="108" parent="11" name="audit_remark">
+      <Position>11</Position>
+      <Comment>审核人意见/备注</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="109" parent="11" name="remark">
+      <Position>12</Position>
+      <Comment>备注</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="110" parent="11" name="state">
+      <Position>13</Position>
+      <Comment>是否删除（0正常，1删除）</Comment>
+      <DataType>bit(1)|0</DataType>
+    </column>
+    <key id="111" parent="11" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="112" parent="12" name="p_id">
+      <Position>1</Position>
+      <Comment>推送Id</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="113" parent="12" name="p_activity_id">
+      <Position>2</Position>
+      <Comment>活动Id</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="114" parent="12" name="p_company_id">
+      <Position>3</Position>
+      <Comment>公司的Id</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="115" parent="12" name="p_create_user">
+      <Position>4</Position>
+      <Comment>推送人</Comment>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="116" parent="12" name="p_title">
+      <Position>5</Position>
+      <Comment>标题</Comment>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="117" parent="12" name="p_content">
+      <Position>6</Position>
+      <Comment>内容</Comment>
+      <DataType>text|0</DataType>
+    </column>
+    <column id="118" parent="12" name="P_submit_time">
+      <Position>7</Position>
+      <Comment>提交时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="119" parent="12" name="p_passageway">
+      <Position>8</Position>
+      <Comment>通道</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="120" parent="12" name="p_node_type">
+      <Position>9</Position>
+      <Comment>节点类型：1、短信SMS，2、email，3、app</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="121" parent="12" name="p_push_type">
+      <Position>10</Position>
+      <Comment>推送的方式:1、立即，2、定时</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="122" parent="12" name="p_send_time">
+      <Position>11</Position>
+      <Comment>发送的时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="123" parent="12" name="p_out_man_id">
+      <Position>12</Position>
+      <Comment>推送人群的Id（output_management表）</Comment>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="124" parent="12" name="p_create_time">
+      <Position>13</Position>
+      <Comment>创建时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="125" parent="12" name="p_update_time">
+      <Position>14</Position>
+      <Comment>更新时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="126" parent="12" name="p_push_status">
+      <Position>15</Position>
+      <Comment>推送的状态:0、未开始，1、等待，2、已完成</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="127" parent="12" name="p_immediately_push">
+      <Position>16</Position>
+      <Comment>推送是否有效，0、暂时不执行推送，1、开始执行推送（立即就马上开始推送，定时到指定的时间开始推送）</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="128" parent="12" name="p_isenable">
+      <Position>17</Position>
+      <Comment>数据是否可用，0、不可用，1、可用</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <key id="129" parent="12" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>p_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="130" parent="13" name="id">
+      <Position>1</Position>
+      <Comment>活动推送结果报表ID</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="131" parent="13" name="activity_id">
+      <Position>2</Position>
+      <Comment>活动ID</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="132" parent="13" name="push_date">
+      <Position>3</Position>
+      <Comment>推送日期</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="133" parent="13" name="sms_num">
+      <Position>4</Position>
+      <Comment>SMS推送人数</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="134" parent="13" name="sms_success_num">
+      <Position>5</Position>
+      <Comment>SMS成功推送人数</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="135" parent="13" name="email_num">
+      <Position>6</Position>
+      <Comment>EMAIL推送人数</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="136" parent="13" name="email_success_num">
+      <Position>7</Position>
+      <Comment>EMAIL成功推送人数</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="137" parent="13" name="app_num">
+      <Position>8</Position>
+      <Comment>APP推送人数</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="138" parent="13" name="app_success_num">
+      <Position>9</Position>
+      <Comment>APP成功推送人数</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <key id="139" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="140" parent="14" name="id">
+      <Position>1</Position>
+      <DataType>int(11) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="141" parent="14" name="shop_id">
+      <Position>2</Position>
+      <Comment>商店id</Comment>
+      <DataType>int(11) unsigned|0</DataType>
+    </column>
+    <column id="142" parent="14" name="end_time">
+      <Position>3</Position>
+      <Comment>分析截止日期yyyy-MM-dd</Comment>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="143" parent="14" name="consumer_ids">
+      <Position>4</Position>
+      <Comment>客户id列表.多个用户，用逗号分隔</Comment>
+      <DataType>mediumtext|0</DataType>
+    </column>
+    <column id="144" parent="14" name="consumer_num">
+      <Position>5</Position>
+      <Comment>客户人数</Comment>
+      <DataType>int(11)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="145" parent="14" name="key">
+      <Position>6</Position>
+      <Comment>节点关键标志</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="146" parent="14" name="r_value">
+      <Position>7</Position>
+      <Comment>r值  30，90，180，360</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="147" parent="14" name="parent_key">
+      <Position>8</Position>
+      <Comment>父节点关键标志。0表示此节点为父节点</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="148" parent="14" name="rate">
+      <Position>9</Position>
+      <Comment>该节点人数占父节点的比例</Comment>
+      <DataType>float|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <index id="149" parent="14" name="shop_id">
+      <ColNames>shop_id</ColNames>
+    </index>
+    <key id="150" parent="14" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="151" parent="14" name="all_consumer_struct_ibfk_1">
+      <ColNames>shop_id</ColNames>
+      <RefSchemaName>crm</RefSchemaName>
+      <RefTableName>shop</RefTableName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <column id="152" parent="15" name="id">
+      <Position>1</Position>
+      <DataType>int(10) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="153" parent="15" name="code">
+      <Position>2</Position>
+      <Comment>编号</Comment>
+      <DataType>varchar(8)|0</DataType>
+    </column>
+    <column id="154" parent="15" name="comment">
+      <Position>3</Position>
+      <Comment>描述</Comment>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <key id="155" parent="15" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="156" parent="16" name="id">
+      <Position>1</Position>
+      <DataType>int(11) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="157" parent="16" name="cat_code">
+      <Position>2</Position>
+      <Comment>版别代码</Comment>
+      <DataType>varchar(8)|0</DataType>
+    </column>
+    <column id="158" parent="16" name="cat_name">
+      <Position>3</Position>
+      <Comment>版别名称</Comment>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <key id="159" parent="16" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="160" parent="17" name="id">
+      <Position>1</Position>
+      <DataType>int(11) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="161" parent="17" name="company_name">
+      <Position>2</Position>
+      <Comment>公司名称</Comment>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="162" parent="17" name="comment">
+      <Position>3</Position>
+      <Comment>商家描述</Comment>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="163" parent="17" name="status">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="164" parent="17" name="create_date">
+      <Position>5</Position>
+      <Comment>创建时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="165" parent="17" name="code">
+      <Position>6</Position>
+      <Comment>商家编号</Comment>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <key id="166" parent="17" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="167" parent="18" name="id">
+      <Position>1</Position>
+      <Comment>客户id</Comment>
+      <DataType>int(11) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="168" parent="18" name="name">
+      <Position>2</Position>
+      <Comment>客户姓名</Comment>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="169" parent="18" name="gender">
+      <Position>3</Position>
+      <Comment>客户性别，0 — 未填 ，1—男，2—女</Comment>
+      <DataType>int(11)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="170" parent="18" name="shop_id">
+      <Position>4</Position>
+      <Comment>店家id</Comment>
+      <DataType>int(11) unsigned|0</DataType>
+    </column>
+    <column id="171" parent="18" name="card_no">
+      <Position>5</Position>
+      <Comment>卡号</Comment>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="172" parent="18" name="birthday">
+      <Position>6</Position>
+      <Comment>生日</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="173" parent="18" name="career">
+      <Position>7</Position>
+      <Comment>从事职业</Comment>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="174" parent="18" name="address">
+      <Position>8</Position>
+      <Comment>对应商务entry_state</Comment>
+      <DataType>varchar(500)|0</DataType>
+    </column>
+    <column id="175" parent="18" name="company_id">
+      <Position>9</Position>
+      <Comment>公司id</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;1&apos;</DefaultExpression>
+    </column>
+    <column id="176" parent="18" name="card_level">
+      <Position>10</Position>
+      <Comment>卡级别</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="177" parent="18" name="card_type">
+      <Position>11</Position>
+      <Comment>卡类型</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="178" parent="18" name="card_status">
+      <Position>12</Position>
+      <Comment>1:正常 2：暂停 3:空卡   (无会员信息空卡状态，默认为1) 4：正在验证修改邮箱状态 5:正在验证注册邮箱状态,6:挂失</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="179" parent="18" name="create_date">
+      <Position>13</Position>
+      <Comment>创建时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="180" parent="18" name="deadline">
+      <Position>14</Position>
+      <Comment>有效期截至时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="181" parent="18" name="periods_money">
+      <Position>15</Position>
+      <Comment>累计金额</Comment>
+      <DataType>float(12,2)|0</DataType>
+      <DefaultExpression>&apos;0.00&apos;</DefaultExpression>
+    </column>
+    <column id="182" parent="18" name="creator">
+      <Position>16</Position>
+      <Comment>创建者</Comment>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="183" parent="18" name="country">
+      <Position>17</Position>
+      <Comment>地区</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="184" parent="18" name="come_from">
+      <Position>18</Position>
+      <Comment>入会方式：1：web 2：paper 3：WeChat 4：wifi 空卡默认为null</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="185" parent="18" name="info_status">
+      <Position>19</Position>
+      <Comment>0：空卡   1：非空卡</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="186" parent="18" name="email_address">
+      <Position>20</Position>
+      <Comment>邮箱地址</Comment>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="187" parent="18" name="phone_no">
+      <Position>21</Position>
+      <Comment>电话号码</Comment>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="188" parent="18" name="consumer_id">
+      <Position>22</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="189" parent="18" name="shop_id">
+      <ColNames>shop_id</ColNames>
+    </index>
+    <key id="190" parent="18" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="191" parent="18" name="consumer_ibfk_1">
+      <ColNames>shop_id</ColNames>
+      <RefSchemaName>crm</RefSchemaName>
+      <RefTableName>shop</RefTableName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <column id="192" parent="19" name="id">
+      <Position>1</Position>
+      <DataType>int(11) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="193" parent="19" name="consumer_id">
+      <Position>2</Position>
+      <Comment>与friend_consumer.id对应</Comment>
+      <DataType>int(11) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="194" parent="19" name="consumer_type">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="195" parent="19" name="child_no">
+      <Position>4</Position>
+      <Comment>小孩数量</Comment>
+      <DataType>varchar(25)|0</DataType>
+    </column>
+    <column id="196" parent="19" name="child_gender">
+      <Position>5</Position>
+      <Comment>小孩性别</Comment>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="197" parent="19" name="favour_reading_type">
+      <Position>6</Position>
+      <Comment>喜爱阅读类型</Comment>
+      <DataType>varchar(1000)|0</DataType>
+    </column>
+    <column id="198" parent="19" name="interest_social">
+      <Position>7</Position>
+      <Comment>兴趣爱好</Comment>
+      <DataType>varchar(1000)|0</DataType>
+    </column>
+    <column id="199" parent="19" name="favour_reading_english_type">
+      <Position>8</Position>
+      <Comment>喜爱英语阅读类型</Comment>
+      <DataType>varchar(1000)|0</DataType>
+    </column>
+    <column id="200" parent="19" name="subscribe_paper_type">
+      <Position>9</Position>
+      <DataType>varchar(1000)|0</DataType>
+    </column>
+    <column id="201" parent="19" name="income_level">
+      <Position>10</Position>
+      <Comment>收入层次</Comment>
+      <DataType>varchar(1000)|0</DataType>
+    </column>
+    <column id="202" parent="19" name="accept_feed_new_activity">
+      <Position>11</Position>
+      <Comment>三联：推广讯息
+商务：优惠情报及活动资讯</Comment>
+      <DataType>bit(1)|0</DataType>
+    </column>
+    <column id="203" parent="19" name="paperwork_type">
+      <Position>12</Position>
+      <Comment>证件类别</Comment>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="204" parent="19" name="paperwork_num">
+      <Position>13</Position>
+      <Comment>证件号</Comment>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="205" parent="19" name="continued_card_info">
+      <Position>14</Position>
+      <Comment>接受邮件
+商务：续卡资讯</Comment>
+      <DataType>bit(1)|0</DataType>
+      <DefaultExpression>b&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="206" parent="19" name="accept_feed_new_book">
+      <Position>15</Position>
+      <Comment>商务：新书快讯</Comment>
+      <DataType>bit(1)|0</DataType>
+    </column>
+    <column id="207" parent="19" name="customers_id">
+      <Position>16</Position>
+      <Comment>商务资讯会员ID</Comment>
+      <DataType>varchar(25)|0</DataType>
+    </column>
+    <column id="208" parent="19" name="customers_telephone_type">
+      <Position>17</Position>
+      <Comment>商务数据同步字，电话号码类型。H 代表家用电话；O 代表公司电话；M 代表手提电话。</Comment>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="209" parent="19" name="customers_fax">
+      <Position>18</Position>
+      <Comment>传真</Comment>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="210" parent="19" name="customers_telephone_extension">
+      <Position>19</Position>
+      <Comment>商务数据同步字，电话分机号码</Comment>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="211" parent="19" name="customers_memberlevel">
+      <Position>20</Position>
+      <Comment>金银卡等级，RGM：普通会员；SCM：银卡会员；GCM：金卡会员</Comment>
+      <DataType>varchar(25)|0</DataType>
+    </column>
+    <column id="212" parent="19" name="customers_is_show_shop_flow_demo_msg">
+      <Position>21</Position>
+      <Comment>商务数据同步字段，是否显示店铺流量案例信息</Comment>
+      <DataType>varchar(25)|0</DataType>
+    </column>
+    <column id="213" parent="19" name="customers_is_show_book_shelf_msg">
+      <Position>22</Position>
+      <Comment>商务数据同步字段，</Comment>
+      <DataType>varchar(25)|0</DataType>
+    </column>
+    <column id="214" parent="19" name="customers_is_show_coupon">
+      <Position>23</Position>
+      <Comment>是否显示优惠卷</Comment>
+      <DataType>varchar(25)|0</DataType>
+    </column>
+    <column id="215" parent="19" name="customers_is_change_email">
+      <Position>24</Position>
+      <Comment>是否已经改用其他邮箱</Comment>
+      <DataType>varchar(25)|0</DataType>
+    </column>
+    <column id="216" parent="19" name="customers_last_updated_at">
+      <Position>25</Position>
+      <Comment>商务数据同步字段，上次更新时间</Comment>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="217" parent="19" name="cp_store_customers_id">
+      <Position>26</Position>
+      <Comment>商务数据同步字，门市会员ID</Comment>
+      <DataType>varchar(25)|0</DataType>
+    </column>
+    <column id="218" parent="19" name="card_renewal_branch">
+      <Position>27</Position>
+      <Comment>商务数据同步字，辦理續卡門市</Comment>
+      <DataType>varchar(25)|0</DataType>
+    </column>
+    <column id="219" parent="19" name="last_updated_at">
+      <Position>28</Position>
+      <Comment>商务数据同步字，用戶何時更新其資料</Comment>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="220" parent="19" name="marital_status">
+      <Position>29</Position>
+      <Comment>婚姻状况</Comment>
+      <DataType>varchar(25)|0</DataType>
+    </column>
+    <column id="221" parent="19" name="no_renewal_letter">
+      <Position>30</Position>
+      <Comment>商务数据同步字，是否接收續卡資訊</Comment>
+      <DataType>varchar(25)|0</DataType>
+    </column>
+    <column id="222" parent="19" name="src">
+      <Position>31</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="223" parent="19" name="cp_store_m_points_id">
+      <Position>32</Position>
+      <Comment>商务数据同步字段，商务会员卡ID</Comment>
+      <DataType>varchar(25)|0</DataType>
+    </column>
+    <column id="224" parent="19" name="telephone_office">
+      <Position>33</Position>
+      <Comment>电话号 (公司)</Comment>
+      <DataType>varchar(25)|0</DataType>
+    </column>
+    <column id="225" parent="19" name="telephone_home">
+      <Position>34</Position>
+      <Comment>电话号 (家用)</Comment>
+      <DataType>varchar(25)|0</DataType>
+    </column>
+    <column id="226" parent="19" name="addr_flat">
+      <Position>35</Position>
+      <Comment>商务数据同步字段，地址 (房号)</Comment>
+      <DataType>varchar(500)|0</DataType>
+    </column>
+    <column id="227" parent="19" name="addr_floor">
+      <Position>36</Position>
+      <Comment>商务数据同步字，地址 (层数)</Comment>
+      <DataType>varchar(500)|0</DataType>
+    </column>
+    <column id="228" parent="19" name="addr_block">
+      <Position>37</Position>
+      <Comment>商务数据同步字，地址 (座数)</Comment>
+      <DataType>varchar(500)|0</DataType>
+    </column>
+    <column id="229" parent="19" name="addr_building">
+      <Position>38</Position>
+      <Comment>商务数据同步字，地址 (大厦)</Comment>
+      <DataType>varchar(500)|0</DataType>
+    </column>
+    <column id="230" parent="19" name="addr_street">
+      <Position>39</Position>
+      <Comment>商务数据同步字，地址 (街道门牌)</Comment>
+      <DataType>varchar(500)|0</DataType>
+    </column>
+    <column id="231" parent="19" name="addr_district">
+      <Position>40</Position>
+      <Comment>商务数据同步字段，地址 (分区)</Comment>
+      <DataType>varchar(500)|0</DataType>
+    </column>
+    <column id="232" parent="19" name="addr_state">
+      <Position>41</Position>
+      <Comment>商务数据同步字，地址 (区域)</Comment>
+      <DataType>varchar(500)|0</DataType>
+    </column>
+    <column id="233" parent="19" name="visit_shop_times">
+      <Position>42</Position>
+      <Comment>商务数据同步字，问卷 (访店次数)</Comment>
+      <DataType>varchar(25)|0</DataType>
+    </column>
+    <column id="234" parent="19" name="duration_of_visit">
+      <Position>43</Position>
+      <Comment>每个月店铺访问次数</Comment>
+      <DataType>varchar(25)|0</DataType>
+    </column>
+    <column id="235" parent="19" name="ave_spending">
+      <Position>44</Position>
+      <Comment>商务数据同步字，问卷 (平均消费)</Comment>
+      <DataType>varchar(25)|0</DataType>
+    </column>
+    <column id="236" parent="19" name="freq_visit_branch">
+      <Position>45</Position>
+      <Comment>商务数据同步字，问卷 (常到门市)</Comment>
+      <DataType>varchar(25)|0</DataType>
+    </column>
+    <column id="237" parent="19" name="cp_store_mem_ship_level">
+      <Position>46</Position>
+      <Comment>商务数据同步字，會籍類別； NM -- 會員優惠咭; GM 會員貴賓咭;</Comment>
+      <DataType>varchar(25)|0</DataType>
+    </column>
+    <column id="238" parent="19" name="cp_store_mem_ship_psd">
+      <Position>47</Position>
+      <Comment>商务数据同步字，会员卡激活密碼</Comment>
+      <DataType>varchar(25)|0</DataType>
+    </column>
+    <column id="239" parent="19" name="cp_store_mem_ship_is_activated">
+      <Position>48</Position>
+      <Comment>商务数据同步字，門市會員的帳戶是否已核實? 0 – 否； 1 – 是；</Comment>
+      <DataType>varchar(25)|0</DataType>
+    </column>
+    <column id="240" parent="19" name="cp_store_is_mem_card_registered">
+      <Position>49</Position>
+      <Comment>商务数据同步字，该会员卡是否被注册?1 --&gt; 是；0--&gt;否</Comment>
+      <DataType>varchar(25)|0</DataType>
+    </column>
+    <column id="241" parent="19" name="mem_ship_old_card_num">
+      <Position>50</Position>
+      <Comment>旧会员卡号</Comment>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="242" parent="19" name="remark">
+      <Position>51</Position>
+      <Comment>备注</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="243" parent="19" name="accept_promote_information">
+      <Position>52</Position>
+      <Comment>TRUE ：已发送邮件到会员，通知领取实体卡</Comment>
+      <DataType>bit(1)|0</DataType>
+    </column>
+    <column id="244" parent="19" name="blooming_club">
+      <Position>53</Position>
+      <Comment>商务：BC</Comment>
+      <DataType>bit(1)|0</DataType>
+    </column>
+    <column id="245" parent="19" name="coupon">
+      <Position>54</Position>
+      <Comment>给第一次登陆的实体卡会员是否发放优惠券：0-false不发放，1-true发放</Comment>
+      <DataType>bit(1)|0</DataType>
+      <DefaultExpression>b&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="246" parent="19" name="created_chanel">
+      <Position>55</Position>
+      <Comment>（商务）生成渠道：1.旧资讯会员数据同步导入，空值：新资讯会员数据</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="247" parent="19" name="consumer_id">
+      <ColNames>consumer_id</ColNames>
+    </index>
+    <key id="248" parent="19" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="249" parent="19" name="consumer_ext_ibfk_1">
+      <ColNames>consumer_id</ColNames>
+      <RefSchemaName>crm</RefSchemaName>
+      <RefTableName>consumer</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="250" parent="20" name="id">
+      <Position>1</Position>
+      <DataType>int(11) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="251" parent="20" name="rule_name">
+      <Position>2</Position>
+      <Comment>规则名称</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="252" parent="20" name="supporter">
+      <Position>3</Position>
+      <Comment>提供方</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <DefaultExpression>&apos;系统&apos;</DefaultExpression>
+    </column>
+    <column id="253" parent="20" name="create_time">
+      <Position>4</Position>
+      <Comment>最近一次更新</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="254" parent="20" name="user_id">
+      <Position>5</Position>
+      <DataType>int(11) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="255" parent="20" name="rule_type">
+      <Position>6</Position>
+      <Comment>10 rfm 20 客人结构分析 30 商品分析 33 回购周期分析 34 销售连带 40 销售分析 51 活跃用户 52 妈妈人群 53 连续复购用户 54 偏好折扣用户 55 季度唤醒用户 56 特殊时候招募人群 57 教科书人群 61高消费客户 62 中消费A类客户 63 中消费B类客户 64 中消费C类客户</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="256" parent="20" name="parameters">
+      <Position>7</Position>
+      <Comment>规则参数（json对象）</Comment>
+      <DataType>text|0</DataType>
+    </column>
+    <column id="257" parent="20" name="user_name">
+      <Position>8</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="258" parent="20" name="shop_id">
+      <Position>9</Position>
+      <DataType>int(11) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="259" parent="20" name="shop_id">
+      <ColNames>shop_id
+rule_name</ColNames>
+    </index>
+    <index id="260" parent="20" name="user_id">
+      <ColNames>user_id</ColNames>
+    </index>
+    <key id="261" parent="20" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="262" parent="20" name="crowd_rule_ibfk_2">
+      <ColNames>user_id</ColNames>
+      <RefSchemaName>crm</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="263" parent="20" name="crowd_rule_ibfk_1">
+      <ColNames>shop_id</ColNames>
+      <RefSchemaName>crm</RefSchemaName>
+      <RefTableName>shop</RefTableName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <column id="264" parent="21" name="ID">
+      <Position>1</Position>
+      <Comment>部门ID</Comment>
+      <DataType>int(11) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="265" parent="21" name="NAME">
+      <Position>2</Position>
+      <Comment>部门名称</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="266" parent="21" name="PARENT_DEPARTMENT_ID">
+      <Position>3</Position>
+      <Comment>上级部门ID</Comment>
+      <DataType>bigint(25) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="267" parent="21" name="LEVEL">
+      <Position>4</Position>
+      <Comment>部门级别</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="268" parent="21" name="CODE">
+      <Position>5</Position>
+      <Comment>部门编码</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="269" parent="21" name="TYPE">
+      <Position>6</Position>
+      <Comment>部门类型</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="270" parent="21" name="CONTACTS">
+      <Position>7</Position>
+      <Comment>部门联系人</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="271" parent="21" name="CONTACTS_ADDRESS">
+      <Position>8</Position>
+      <Comment>部门联系地址</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="272" parent="21" name="CONTACTS_PHONE">
+      <Position>9</Position>
+      <Comment>部门联系电话</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="273" parent="21" name="REMARK">
+      <Position>10</Position>
+      <Comment>部门备注</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="274" parent="21" name="CREATE_TIME">
+      <Position>11</Position>
+      <Comment>部门创建时间</Comment>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="275" parent="21" name="CREATOR">
+      <Position>12</Position>
+      <Comment>创建人</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="276" parent="21" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="277" parent="22" name="code">
+      <Position>1</Position>
+      <Comment>详细类别码</Comment>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="278" parent="22" name="code_desc">
+      <Position>2</Position>
+      <Comment>详细类别介绍</Comment>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="279" parent="22" name="short_code">
+      <Position>3</Position>
+      <Comment>类别简介码</Comment>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="280" parent="22" name="short_code_desc">
+      <Position>4</Position>
+      <Comment>类别简介介绍</Comment>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <index id="281" parent="22" name="code">
+      <ColNames>code</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="282" parent="22" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>code</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="283" parent="22" name="code">
+      <ColNames>code</ColNames>
+      <UnderlyingIndexName>code</UnderlyingIndexName>
+    </key>
+    <column id="284" parent="23" name="id">
+      <Position>1</Position>
+      <DataType>int(11) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="285" parent="23" name="end_time">
+      <Position>2</Position>
+      <Comment>统计截止日期</Comment>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="286" parent="23" name="r_value">
+      <Position>3</Position>
+      <Comment>活跃客户定义  r=[30,90,180,360]</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="287" parent="23" name="shop_id">
+      <Position>4</Position>
+      <Comment>商店id</Comment>
+      <DataType>int(11) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="288" parent="23" name="member_type">
+      <Position>5</Position>
+      <Comment>会员等级  1  2  3</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="289" parent="23" name="member_num">
+      <Position>6</Position>
+      <Comment>会员数量</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="290" parent="23" name="member_turnover">
+      <Position>7</Position>
+      <Comment>会员总成交额</Comment>
+      <DataType>double(12,2)|0</DataType>
+    </column>
+    <column id="291" parent="23" name="member_order_num">
+      <Position>8</Position>
+      <Comment>会员总订单数</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="292" parent="23" name="ave_turnover">
+      <Position>9</Position>
+      <Comment>人均累计成交（总成交额/总人数）</Comment>
+      <DataType>double(12,2)|0</DataType>
+      <DefaultExpression>&apos;0.00&apos;</DefaultExpression>
+    </column>
+    <column id="293" parent="23" name="ave_num">
+      <Position>10</Position>
+      <Comment>人均购买次数（总订单数/客户数）</Comment>
+      <DataType>double(12,2)|0</DataType>
+      <DefaultExpression>&apos;0.00&apos;</DefaultExpression>
+    </column>
+    <column id="294" parent="23" name="ave_per_turnover">
+      <Position>11</Position>
+      <Comment>人均每次成交（人均累计成交/人均购买次数）</Comment>
+      <DataType>double(12,2)|0</DataType>
+      <DefaultExpression>&apos;0.00&apos;</DefaultExpression>
+    </column>
+    <index id="295" parent="23" name="shop_id">
+      <ColNames>shop_id</ColNames>
+    </index>
+    <key id="296" parent="23" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="297" parent="23" name="member_analysis_ibfk_1">
+      <ColNames>shop_id</ColNames>
+      <RefSchemaName>crm</RefSchemaName>
+      <RefTableName>shop</RefTableName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <column id="298" parent="24" name="id">
+      <Position>1</Position>
+      <Comment>订单id</Comment>
+      <DataType>int(11) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="299" parent="24" name="consumer_id">
+      <Position>2</Position>
+      <Comment>会员ID</Comment>
+      <DataType>int(11) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="300" parent="24" name="type">
+      <Position>3</Position>
+      <Comment>订单类型  1 销售单 2 作废单 3 退货单 4 网站活动</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="301" parent="24" name="total_origin_price">
+      <Position>4</Position>
+      <Comment>订单原价 未使用</Comment>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="302" parent="24" name="status">
+      <Position>5</Position>
+      <Comment>订单状态</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="303" parent="24" name="create_timestamp">
+      <Position>6</Position>
+      <Comment>订单创建时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="304" parent="24" name="order_no">
+      <Position>7</Position>
+      <Comment>订单编号</Comment>
+      <DataType>varchar(25)|0</DataType>
+    </column>
+    <column id="305" parent="24" name="shop_id">
+      <Position>8</Position>
+      <Comment>商店id</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="306" parent="24" name="company_id">
+      <Position>9</Position>
+      <Comment>公司id</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="307" parent="24" name="card_no">
+      <Position>10</Position>
+      <Comment>会员卡号</Comment>
+      <DataType>varchar(25)|0</DataType>
+    </column>
+    <column id="308" parent="24" name="total_price">
+      <Position>11</Position>
+      <Comment>订单总价</Comment>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="309" parent="24" name="disc_rate">
+      <Position>12</Position>
+      <Comment>订单折扣率 未使用</Comment>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="310" parent="24" name="currency_type">
+      <Position>13</Position>
+      <Comment>币种</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="311" parent="24" name="score">
+      <Position>14</Position>
+      <Comment>订单总积分</Comment>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="312" parent="24" name="pos_code">
+      <Position>15</Position>
+      <Comment>Pos机编号</Comment>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="313" parent="24" name="disable_order">
+      <Position>16</Position>
+      <Comment>作废单号</Comment>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="314" parent="24" name="order_id">
+      <Position>17</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="315" parent="24" name="consumer_id">
+      <ColNames>consumer_id
+card_no
+shop_id
+create_timestamp</ColNames>
+    </index>
+    <index id="316" parent="24" name="shop_id">
+      <ColNames>shop_id
+create_timestamp</ColNames>
+    </index>
+    <key id="317" parent="24" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="318" parent="25" name="id">
+      <Position>1</Position>
+      <Comment>主键</Comment>
+      <DataType>int(11) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="319" parent="25" name="order_id">
+      <Position>2</Position>
+      <Comment>订单id</Comment>
+      <DataType>int(11) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="320" parent="25" name="create_timestamp">
+      <Position>3</Position>
+      <Comment>创建时间, 需要去掉</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="321" parent="25" name="product_snapshot">
+      <Position>4</Position>
+      <Comment>商品快照 未使用</Comment>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="322" parent="25" name="item_no">
+      <Position>5</Position>
+      <Comment>商品数量</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="323" parent="25" name="product_id">
+      <Position>6</Position>
+      <Comment>货号,也就是商品id</Comment>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="324" parent="25" name="status">
+      <Position>7</Position>
+      <Comment>商品状态  0正常 1退掉</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="325" parent="25" name="apg">
+      <Position>8</Position>
+      <Comment>货品组别</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="326" parent="25" name="cat">
+      <Position>9</Position>
+      <Comment>版别</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="327" parent="25" name="price">
+      <Position>10</Position>
+      <Comment>每个货品的结算总金额</Comment>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="328" parent="25" name="price_per_item">
+      <Position>11</Position>
+      <Comment>每个物品原始单价</Comment>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="329" parent="25" name="prom_price">
+      <Position>12</Position>
+      <Comment>促销价</Comment>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="330" parent="25" name="discount_percent">
+      <Position>13</Position>
+      <Comment>折扣率</Comment>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="331" parent="25" name="discount_amont">
+      <Position>14</Position>
+      <Comment>额外扣减</Comment>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="332" parent="25" name="score">
+      <Position>15</Position>
+      <Comment>每个货品积分</Comment>
+      <DataType>float|0</DataType>
+    </column>
+    <index id="333" parent="25" name="order_id">
+      <ColNames>price
+product_id
+apg
+create_timestamp</ColNames>
+    </index>
+    <index id="334" parent="25" name="order_id_2">
+      <ColNames>order_id</ColNames>
+    </index>
+    <index id="335" parent="25" name="time">
+      <ColNames>create_timestamp</ColNames>
+    </index>
+    <key id="336" parent="25" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="337" parent="25" name="order_info_ibfk_1">
+      <ColNames>order_id</ColNames>
+      <RefSchemaName>crm</RefSchemaName>
+      <RefTableName>order</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="338" parent="26" name="id">
+      <Position>1</Position>
+      <DataType>int(11) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="339" parent="26" name="shop_id">
+      <Position>2</Position>
+      <Comment>商店id</Comment>
+      <DataType>int(11) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="340" parent="26" name="user_id">
+      <Position>3</Position>
+      <Comment>用户id</Comment>
+      <DataType>int(11) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="341" parent="26" name="user_name">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="342" parent="26" name="output_name">
+      <Position>5</Position>
+      <Comment>输出任务名称</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="343" parent="26" name="last_update_time">
+      <Position>6</Position>
+      <Comment>上次修改时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="344" parent="26" name="update_frequency">
+      <Position>7</Position>
+      <Comment>更新频率 0 不更新 i (其他数字)每 i 天更新</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="345" parent="26" name="status">
+      <Position>8</Position>
+      <Comment>状态：0 过期 1 已完成  2 运行中 3 出错</Comment>
+      <DataType>int(11)|0</DataType>
+      <DefaultExpression>&apos;1&apos;</DefaultExpression>
+    </column>
+    <column id="346" parent="26" name="consumer_ids">
+      <Position>9</Position>
+      <Comment>客户id列表</Comment>
+      <DataType>mediumtext|0</DataType>
+    </column>
+    <column id="347" parent="26" name="crowd_rule_id">
+      <Position>10</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="348" parent="26" name="expire_time">
+      <Position>11</Position>
+      <Comment>到期时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <index id="349" parent="26" name="shop_id">
+      <ColNames>shop_id</ColNames>
+    </index>
+    <index id="350" parent="26" name="user_id">
+      <ColNames>user_id</ColNames>
+    </index>
+    <key id="351" parent="26" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="352" parent="26" name="output_management_ibfk_1">
+      <ColNames>shop_id</ColNames>
+      <RefSchemaName>crm</RefSchemaName>
+      <RefTableName>shop</RefTableName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="353" parent="26" name="output_management_ibfk_2">
+      <ColNames>user_id</ColNames>
+      <RefSchemaName>crm</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <column id="354" parent="27" name="id">
+      <Position>1</Position>
+      <Comment>主键</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="355" parent="27" name="article_number">
+      <Position>2</Position>
+      <Comment>书号</Comment>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="356" parent="27" name="isbn">
+      <Position>3</Position>
+      <Comment>isbn号码</Comment>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="357" parent="27" name="name">
+      <Position>4</Position>
+      <Comment>书名</Comment>
+      <DataType>varchar(200)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="358" parent="27" name="author">
+      <Position>5</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="359" parent="27" name="publish_house">
+      <Position>6</Position>
+      <Comment>出版社</Comment>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="360" parent="27" name="mc">
+      <Position>7</Position>
+      <Comment>分类</Comment>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="361" parent="27" name="cat">
+      <Position>8</Position>
+      <Comment>版别</Comment>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="362" parent="27" name="price">
+      <Position>9</Position>
+      <Comment>价格</Comment>
+      <DataType>float|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="363" parent="27" name="publish_date">
+      <Position>10</Position>
+      <Comment>出版日期</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="364" parent="27" name="edition">
+      <Position>11</Position>
+      <Comment>版次</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="365" parent="27" name="book_series">
+      <Position>12</Position>
+      <Comment>所属系列</Comment>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="366" parent="27" name="language">
+      <Position>13</Position>
+      <Comment>语言</Comment>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="367" parent="27" name="page_num">
+      <Position>14</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="368" parent="27" name="article_number">
+      <ColNames>article_number</ColNames>
+    </index>
+    <index id="369" parent="27" name="isbn">
+      <ColNames>isbn</ColNames>
+    </index>
+    <key id="370" parent="27" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="371" parent="28" name="id">
+      <Position>1</Position>
+      <DataType>int(11) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="372" parent="28" name="shop_id">
+      <Position>2</Position>
+      <Comment>店铺id</Comment>
+      <DataType>int(11) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="373" parent="28" name="product_id">
+      <Position>3</Position>
+      <Comment>产品id</Comment>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="374" parent="28" name="product_name">
+      <Position>4</Position>
+      <Comment>产品名称</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="375" parent="28" name="product_disable">
+      <Position>5</Position>
+      <Comment>产品是否在架，0在，1不在</Comment>
+      <DataType>int(1)|0</DataType>
+    </column>
+    <column id="376" parent="28" name="type_name">
+      <Position>6</Position>
+      <Comment>产品的类目category</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="377" parent="28" name="buyer">
+      <Position>7</Position>
+      <Comment>购买人数</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="378" parent="28" name="buyer_back">
+      <Position>8</Position>
+      <Comment>回购人数</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="379" parent="28" name="buy_back_rate">
+      <Position>9</Position>
+      <Comment>回购率</Comment>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="380" parent="28" name="ave_buyback_perperson">
+      <Position>10</Position>
+      <Comment>人均回购次数</Comment>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="381" parent="28" name="ave_buyback_cycle">
+      <Position>11</Position>
+      <Comment>平均回购周期（天）</Comment>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="382" parent="28" name="not_buyer_today">
+      <Position>12</Position>
+      <Comment>今日到期未购买人数</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="383" parent="28" name="not_buyer_week">
+      <Position>13</Position>
+      <Comment>本周到期未购买人数</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="384" parent="28" name="consumer_ids_today">
+      <Position>14</Position>
+      <Comment>今日到期未购买人群</Comment>
+      <DataType>mediumtext|0</DataType>
+    </column>
+    <column id="385" parent="28" name="consumer_ids_week">
+      <Position>15</Position>
+      <Comment>本周到期未购买人群</Comment>
+      <DataType>mediumtext|0</DataType>
+    </column>
+    <column id="386" parent="28" name="recency">
+      <Position>16</Position>
+      <Comment>0代表365天，近一年订单，1代表3个月，2代表半年</Comment>
+      <DataType>int(1)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="387" parent="28" name="create_time">
+      <Position>17</Position>
+      <Comment>该记录插入时间</Comment>
+      <DataType>date|0</DataType>
+    </column>
+    <index id="388" parent="28" name="shop_id">
+      <ColNames>shop_id</ColNames>
+    </index>
+    <key id="389" parent="28" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="390" parent="28" name="product_back_cycle_ibfk_1">
+      <ColNames>shop_id</ColNames>
+      <RefSchemaName>crm</RefSchemaName>
+      <RefTableName>shop</RefTableName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <column id="391" parent="29" name="id">
+      <Position>1</Position>
+      <DataType>int(11) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="392" parent="29" name="shop_id">
+      <Position>2</Position>
+      <Comment>商店id</Comment>
+      <DataType>int(11) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="393" parent="29" name="end_time">
+      <Position>3</Position>
+      <Comment>分析截止时间</Comment>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="394" parent="29" name="type">
+      <Position>4</Position>
+      <Comment>1 按周 2 按月 3 按天</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="395" parent="29" name="product_id">
+      <Position>5</Position>
+      <Comment>商品id</Comment>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="396" parent="29" name="product_name">
+      <Position>6</Position>
+      <Comment>商品名称</Comment>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="397" parent="29" name="analysis_result">
+      <Position>7</Position>
+      <Comment>节点名称</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="398" parent="29" name="amount">
+      <Position>8</Position>
+      <Comment>商品总成交额</Comment>
+      <DataType>double(20,2)|0</DataType>
+      <DefaultExpression>&apos;0.00&apos;</DefaultExpression>
+    </column>
+    <column id="399" parent="29" name="num">
+      <Position>9</Position>
+      <Comment>商品成交总数</Comment>
+      <DataType>int(11)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="400" parent="29" name="ave_amount">
+      <Position>10</Position>
+      <Comment>商品成交均价</Comment>
+      <DataType>double(20,2)|0</DataType>
+      <DefaultExpression>&apos;0.00&apos;</DefaultExpression>
+    </column>
+    <column id="401" parent="29" name="amount_rate">
+      <Position>11</Position>
+      <Comment>商品成交同比</Comment>
+      <DataType>double(20,4)|0</DataType>
+      <DefaultExpression>&apos;0.0000&apos;</DefaultExpression>
+    </column>
+    <column id="402" parent="29" name="num_rate">
+      <Position>12</Position>
+      <Comment>商品成交数量同比</Comment>
+      <DataType>double(20,4)|0</DataType>
+      <DefaultExpression>&apos;0.0000&apos;</DefaultExpression>
+    </column>
+    <column id="403" parent="29" name="ave_rate">
+      <Position>13</Position>
+      <Comment>商品均价同比</Comment>
+      <DataType>double(20,4)|0</DataType>
+      <DefaultExpression>&apos;0.0000&apos;</DefaultExpression>
+    </column>
+    <column id="404" parent="29" name="route">
+      <Position>14</Position>
+      <Comment>商品所属节点路径</Comment>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <index id="405" parent="29" name="shop_id">
+      <ColNames>shop_id</ColNames>
+    </index>
+    <key id="406" parent="29" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="407" parent="29" name="product_category_ibfk_1">
+      <ColNames>shop_id</ColNames>
+      <RefSchemaName>crm</RefSchemaName>
+      <RefTableName>shop</RefTableName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <column id="408" parent="30" name="id">
+      <Position>1</Position>
+      <DataType>int(11) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="409" parent="30" name="shop_id">
+      <Position>2</Position>
+      <Comment>店铺id</Comment>
+      <DataType>int(11) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="410" parent="30" name="product_aid">
+      <Position>3</Position>
+      <Comment>产品A的id</Comment>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="411" parent="30" name="product_aname">
+      <Position>4</Position>
+      <Comment>产品A的名字</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="412" parent="30" name="product_adisable">
+      <Position>5</Position>
+      <Comment>产品A是否在架，0在，1不在</Comment>
+      <DataType>int(1)|0</DataType>
+    </column>
+    <column id="413" parent="30" name="type_a">
+      <Position>6</Position>
+      <Comment>产品A的类目category</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="414" parent="30" name="skim_a">
+      <Position>7</Position>
+      <Comment>浏览A商品的人数</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="415" parent="30" name="product_bid">
+      <Position>8</Position>
+      <Comment>产品B的id</Comment>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="416" parent="30" name="product_bname">
+      <Position>9</Position>
+      <Comment>产品B的名字</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="417" parent="30" name="product_bdisable">
+      <Position>10</Position>
+      <Comment>产品B是否在架，0在，1不在</Comment>
+      <DataType>int(1)|0</DataType>
+    </column>
+    <column id="418" parent="30" name="type_b">
+      <Position>11</Position>
+      <Comment>产品B的类目category</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="419" parent="30" name="skim_b">
+      <Position>12</Position>
+      <Comment>浏览B商品的人数</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="420" parent="30" name="collocation_correlation">
+      <Position>13</Position>
+      <Comment>搭配关联</Comment>
+      <DataType>varchar(5)|0</DataType>
+    </column>
+    <column id="421" parent="30" name="embedded_pages_joint_rate">
+      <Position>14</Position>
+      <Comment>浏览连带率</Comment>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="422" parent="30" name="recency">
+      <Position>15</Position>
+      <Comment>默认使用近7天浏览量分析，为0</Comment>
+      <DataType>int(1)|0</DataType>
+    </column>
+    <column id="423" parent="30" name="create_time">
+      <Position>16</Position>
+      <Comment>该记录插入时间</Comment>
+      <DataType>date|0</DataType>
+    </column>
+    <index id="424" parent="30" name="shop_id">
+      <ColNames>shop_id</ColNames>
+    </index>
+    <key id="425" parent="30" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="426" parent="30" name="product_embedded_joint_ibfk_1">
+      <ColNames>shop_id</ColNames>
+      <RefSchemaName>crm</RefSchemaName>
+      <RefTableName>shop</RefTableName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <column id="427" parent="31" name="id">
+      <Position>1</Position>
+      <DataType>int(11) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="428" parent="31" name="shop_id">
+      <Position>2</Position>
+      <Comment>店铺id</Comment>
+      <DataType>int(11) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="429" parent="31" name="product_aid">
+      <Position>3</Position>
+      <Comment>产品A的id</Comment>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="430" parent="31" name="product_aname">
+      <Position>4</Position>
+      <Comment>产品A的名字</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="431" parent="31" name="product_adisable">
+      <Position>5</Position>
+      <Comment>产品A是否在架，0在，1不在</Comment>
+      <DataType>int(1)|0</DataType>
+    </column>
+    <column id="432" parent="31" name="type_a">
+      <Position>6</Position>
+      <Comment>产品A的类目category</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="433" parent="31" name="buyer_a">
+      <Position>7</Position>
+      <Comment>购买产品A的人数</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="434" parent="31" name="product_bid">
+      <Position>8</Position>
+      <Comment>产品B的id</Comment>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="435" parent="31" name="product_bname">
+      <Position>9</Position>
+      <Comment>产品B的名字</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="436" parent="31" name="product_bdisable">
+      <Position>10</Position>
+      <Comment>产品B是否在架，0在，1不在</Comment>
+      <DataType>int(1)|0</DataType>
+    </column>
+    <column id="437" parent="31" name="type_b">
+      <Position>11</Position>
+      <Comment>产品B的类目category</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="438" parent="31" name="buyer_b">
+      <Position>12</Position>
+      <Comment>购买产品B的人数</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="439" parent="31" name="collocation_correlation">
+      <Position>13</Position>
+      <Comment>搭配关联</Comment>
+      <DataType>varchar(5)|0</DataType>
+    </column>
+    <column id="440" parent="31" name="sales_joint_rate">
+      <Position>14</Position>
+      <Comment>购买连带率</Comment>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="441" parent="31" name="recommendable_people">
+      <Position>15</Position>
+      <Comment>可推荐人数</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="442" parent="31" name="success_people">
+      <Position>16</Position>
+      <Comment>预计成功数</Comment>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="443" parent="31" name="recency">
+      <Position>17</Position>
+      <Comment>对最近recency天的数据进行分析，可选值：7,30,90</Comment>
+      <DataType>int(8)|0</DataType>
+    </column>
+    <column id="444" parent="31" name="consumer_ids">
+      <Position>18</Position>
+      <Comment>人群</Comment>
+      <DataType>mediumtext|0</DataType>
+    </column>
+    <column id="445" parent="31" name="create_time">
+      <Position>19</Position>
+      <Comment>该记录插入时间</Comment>
+      <DataType>date|0</DataType>
+    </column>
+    <index id="446" parent="31" name="shop_id">
+      <ColNames>shop_id</ColNames>
+    </index>
+    <key id="447" parent="31" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="448" parent="31" name="product_sale_joint_ibfk_1">
+      <ColNames>shop_id</ColNames>
+      <RefSchemaName>crm</RefSchemaName>
+      <RefTableName>shop</RefTableName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <column id="449" parent="32" name="id">
+      <Position>1</Position>
+      <DataType>int(11) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="450" parent="32" name="shop_id">
+      <Position>2</Position>
+      <Comment>店铺id</Comment>
+      <DataType>int(11) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="451" parent="32" name="product_aid">
+      <Position>3</Position>
+      <Comment>产品A的id</Comment>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="452" parent="32" name="product_aname">
+      <Position>4</Position>
+      <Comment>产品A的名字</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="453" parent="32" name="product_adisable">
+      <Position>5</Position>
+      <Comment>产品A是否在架，0在，1不在</Comment>
+      <DataType>int(1)|0</DataType>
+    </column>
+    <column id="454" parent="32" name="type_a">
+      <Position>6</Position>
+      <Comment>产品A的类目category</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="455" parent="32" name="skim_a">
+      <Position>7</Position>
+      <Comment>浏览A商品的人数</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="456" parent="32" name="product_bid">
+      <Position>8</Position>
+      <Comment>产品B的id</Comment>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="457" parent="32" name="product_bname">
+      <Position>9</Position>
+      <Comment>产品B的名字</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="458" parent="32" name="product_bdisable">
+      <Position>10</Position>
+      <Comment>产品B是否在架，0在，1不在</Comment>
+      <DataType>int(1)|0</DataType>
+    </column>
+    <column id="459" parent="32" name="type_b">
+      <Position>11</Position>
+      <Comment>产品B的类目category</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="460" parent="32" name="buyer_b">
+      <Position>12</Position>
+      <Comment>购买商品B的人数</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="461" parent="32" name="collocation_correlation">
+      <Position>13</Position>
+      <Comment>搭配关联</Comment>
+      <DataType>varchar(5)|0</DataType>
+    </column>
+    <column id="462" parent="32" name="money_b">
+      <Position>14</Position>
+      <Comment>购买B的总金额（元）</Comment>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="463" parent="32" name="transfer_rate">
+      <Position>15</Position>
+      <Comment>转化连带率</Comment>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="464" parent="32" name="recency">
+      <Position>16</Position>
+      <Comment>默认使用近7天数据分析，为0</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="465" parent="32" name="create_time">
+      <Position>17</Position>
+      <Comment>该记录插入时间</Comment>
+      <DataType>date|0</DataType>
+    </column>
+    <index id="466" parent="32" name="shop_id">
+      <ColNames>shop_id</ColNames>
+    </index>
+    <key id="467" parent="32" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="468" parent="32" name="product_visitor_value_ibfk_1">
+      <ColNames>shop_id</ColNames>
+      <RefSchemaName>crm</RefSchemaName>
+      <RefTableName>shop</RefTableName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <column id="469" parent="33" name="id">
+      <Position>1</Position>
+      <DataType>int(11) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="470" parent="33" name="type">
+      <Position>2</Position>
+      <Comment>分析类型  1 周  2 月  3 天</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="471" parent="33" name="prom_amount">
+      <Position>3</Position>
+      <Comment>优惠金额</Comment>
+      <DataType>double(20,2)|0</DataType>
+    </column>
+    <column id="472" parent="33" name="prom_num">
+      <Position>4</Position>
+      <Comment>优惠次数</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="473" parent="33" name="shop_id">
+      <Position>5</Position>
+      <Comment>商店id</Comment>
+      <DataType>int(11) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="474" parent="33" name="prom_type">
+      <Position>6</Position>
+      <Comment>优惠方式  1 折扣  2 促销  3 额外扣减</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="475" parent="33" name="end_time">
+      <Position>7</Position>
+      <Comment>分析时间</Comment>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="476" parent="33" name="amount_rate">
+      <Position>8</Position>
+      <Comment>优惠金额环比</Comment>
+      <DataType>double(20,4)|0</DataType>
+    </column>
+    <column id="477" parent="33" name="num_rate">
+      <Position>9</Position>
+      <Comment>优惠次数</Comment>
+      <DataType>double(20,4)|0</DataType>
+    </column>
+    <column id="478" parent="33" name="ave_amount">
+      <Position>10</Position>
+      <Comment>平均优惠金额</Comment>
+      <DataType>double(20,2)|0</DataType>
+    </column>
+    <column id="479" parent="33" name="ave_amount_rate">
+      <Position>11</Position>
+      <Comment>平均优惠金额环比</Comment>
+      <DataType>double(20,4)|0</DataType>
+    </column>
+    <index id="480" parent="33" name="shop_id">
+      <ColNames>shop_id</ColNames>
+    </index>
+    <key id="481" parent="33" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="482" parent="33" name="promotion_analysis_ibfk_1">
+      <ColNames>shop_id</ColNames>
+      <RefSchemaName>crm</RefSchemaName>
+      <RefTableName>shop</RefTableName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <column id="483" parent="34" name="id">
+      <Position>1</Position>
+      <DataType>int(11) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="484" parent="34" name="shop_id">
+      <Position>2</Position>
+      <Comment>商店id外键</Comment>
+      <DataType>int(11) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="485" parent="34" name="expire_date">
+      <Position>3</Position>
+      <Comment>截止时间</Comment>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="486" parent="34" name="time_length">
+      <Position>4</Position>
+      <Comment>截止日期之前多长时间的数据： 1 一个月 2 三个月 3 半年 4 一年 5 所有</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="487" parent="34" name="type">
+      <Position>5</Position>
+      <Comment>分析类型：1 R值分析 2 F值分析 3 M值分析 4 RFM模型分析 5 回购周期分析</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="488" parent="34" name="parameter">
+      <Position>6</Position>
+      <Comment>各个模块分析的参数：r值分析 1 10天间隔 2 30天间隔。f值分析 全部默认为1。m值分析：两位数：个位数 110元间隔 2 20元间隔 3 30元间隔 4 50元间隔 5 100元间隔 6 500元间隔 7 1000元间隔； 十位数 1 代表客单价 2 代表累计消费金额 。rfm模型 1 客户数/占比 2 平均每次购买金额 3 累计购买金额；回购周期 1 10天间隔 2 30天间隔。</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="489" parent="34" name="result_json">
+      <Position>7</Position>
+      <Comment>分析结果集，json格式，参数各定义</Comment>
+      <DataType>text|0</DataType>
+    </column>
+    <index id="490" parent="34" name="index1">
+      <ColNames>shop_id
+expire_date
+parameter</ColNames>
+    </index>
+    <key id="491" parent="34" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="492" parent="34" name="rfm_module_ibfk_1">
+      <ColNames>shop_id</ColNames>
+      <RefSchemaName>crm</RefSchemaName>
+      <RefTableName>shop</RefTableName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <column id="493" parent="35" name="ID">
+      <Position>1</Position>
+      <Comment>角色ID</Comment>
+      <DataType>int(11) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="494" parent="35" name="NAME">
+      <Position>2</Position>
+      <Comment>角色名称</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="495" parent="35" name="ENGLISH_NAME">
+      <Position>3</Position>
+      <Comment>角色英文名</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="496" parent="35" name="AUTHORIZATION">
+      <Position>4</Position>
+      <Comment>角色授权</Comment>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="497" parent="35" name="REMARK">
+      <Position>5</Position>
+      <Comment>备注</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="498" parent="35" name="CREATE_TIME">
+      <Position>6</Position>
+      <Comment>角色创建时间</Comment>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="499" parent="35" name="CREATOR">
+      <Position>7</Position>
+      <Comment>创建人</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="500" parent="35" name="COMPANY_ID">
+      <Position>8</Position>
+      <DataType>int(11) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="501" parent="35" name="COMPANY_ID">
+      <ColNames>COMPANY_ID</ColNames>
+    </index>
+    <key id="502" parent="35" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="503" parent="35" name="role_ibfk_1">
+      <ColNames>COMPANY_ID</ColNames>
+      <RefSchemaName>crm</RefSchemaName>
+      <RefTableName>department</RefTableName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <column id="504" parent="36" name="id">
+      <Position>1</Position>
+      <DataType>int(11) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="505" parent="36" name="shop_id">
+      <Position>2</Position>
+      <Comment>商店id</Comment>
+      <DataType>int(11) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="506" parent="36" name="type">
+      <Position>3</Position>
+      <Comment>1 按周 2 按月 3 按天
+</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="507" parent="36" name="end_time">
+      <Position>4</Position>
+      <Comment>分析截止时间</Comment>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="508" parent="36" name="order_num">
+      <Position>5</Position>
+      <Comment>成交数量</Comment>
+      <DataType>int(11)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="509" parent="36" name="turnover">
+      <Position>6</Position>
+      <Comment>成交额</Comment>
+      <DataType>double(20,2)|0</DataType>
+    </column>
+    <column id="510" parent="36" name="parent_analysis_operator">
+      <Position>7</Position>
+      <Comment>父节点关键标志。0表示此节点为父节点</Comment>
+      <DataType>int(11)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="511" parent="36" name="parent_analysis_result">
+      <Position>8</Position>
+      <Comment>父节点关键标志。0表示此节点为父节点</Comment>
+      <DataType>int(11)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="512" parent="36" name="analysis_operator">
+      <Position>9</Position>
+      <Comment>1 代表首次/回购算子  2 代表 类目商品sku分析算子  3 关联订单算子
+</Comment>
+      <DataType>int(11)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="513" parent="36" name="analysis_result">
+      <Position>10</Position>
+      <Comment>1 首次  2 回购 3 类目 4 商品 5 sku
+
+</Comment>
+      <DataType>int(11)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="514" parent="36" name="ave_order_amount">
+      <Position>11</Position>
+      <Comment>平均成交额</Comment>
+      <DataType>double(20,2)|0</DataType>
+      <DefaultExpression>&apos;0.00&apos;</DefaultExpression>
+    </column>
+    <column id="515" parent="36" name="turnover_week_rate">
+      <Position>12</Position>
+      <Comment>成交额周同比</Comment>
+      <DataType>double(20,4)|0</DataType>
+      <DefaultExpression>&apos;0.0000&apos;</DefaultExpression>
+    </column>
+    <column id="516" parent="36" name="turnover_month_rate">
+      <Position>13</Position>
+      <Comment>成交额月环比</Comment>
+      <DataType>double(20,4)|0</DataType>
+      <DefaultExpression>&apos;0.0000&apos;</DefaultExpression>
+    </column>
+    <column id="517" parent="36" name="name">
+      <Position>14</Position>
+      <Comment>节点名称</Comment>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="518" parent="36" name="route">
+      <Position>15</Position>
+      <Comment>节点路径</Comment>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="519" parent="36" name="order_num_week_rate">
+      <Position>16</Position>
+      <Comment>成交数周同比</Comment>
+      <DataType>double(20,4)|0</DataType>
+      <DefaultExpression>&apos;0.0000&apos;</DefaultExpression>
+    </column>
+    <column id="520" parent="36" name="order_num_month_rate">
+      <Position>17</Position>
+      <Comment>成交月同比</Comment>
+      <DataType>double(20,4)|0</DataType>
+      <DefaultExpression>&apos;0.0000&apos;</DefaultExpression>
+    </column>
+    <index id="521" parent="36" name="shop_id">
+      <ColNames>shop_id</ColNames>
+    </index>
+    <key id="522" parent="36" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="523" parent="36" name="sale_analysis_ibfk_1">
+      <ColNames>shop_id</ColNames>
+      <RefSchemaName>crm</RefSchemaName>
+      <RefTableName>shop</RefTableName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <column id="524" parent="37" name="ID">
+      <Position>1</Position>
+      <Comment>店铺ID</Comment>
+      <DataType>int(11) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="525" parent="37" name="CREATE_TIME">
+      <Position>2</Position>
+      <Comment>创建时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="526" parent="37" name="NAME">
+      <Position>3</Position>
+      <Comment>店铺名</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="527" parent="37" name="CODE">
+      <Position>4</Position>
+      <Comment>店铺编号</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="528" parent="37" name="ADDRESS">
+      <Position>5</Position>
+      <Comment>店铺地址</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="529" parent="37" name="PHONE">
+      <Position>6</Position>
+      <Comment>店铺电话</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="530" parent="37" name="CONTACTS">
+      <Position>7</Position>
+      <Comment>联系人姓名</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="531" parent="37" name="CONTACTS_PHONE">
+      <Position>8</Position>
+      <Comment>联系人电话</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="532" parent="37" name="CONTACTS_EMAIL">
+      <Position>9</Position>
+      <Comment>联系人邮箱</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="533" parent="37" name="REMARK">
+      <Position>10</Position>
+      <Comment>备注</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="534" parent="37" name="CREATOR">
+      <Position>11</Position>
+      <Comment>创建人</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="535" parent="37" name="COMPANY_ID">
+      <Position>12</Position>
+      <DataType>int(11) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="536" parent="37" name="REGION">
+      <Position>13</Position>
+      <Comment>商店区域</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="537" parent="37" name="SHOP_ID">
+      <Position>14</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="538" parent="37" name="COMPANY_ID">
+      <ColNames>COMPANY_ID</ColNames>
+    </index>
+    <key id="539" parent="37" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="540" parent="37" name="shop_ibfk_1">
+      <ColNames>COMPANY_ID</ColNames>
+      <RefSchemaName>crm</RefSchemaName>
+      <RefTableName>department</RefTableName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <column id="541" parent="38" name="ID">
+      <Position>1</Position>
+      <Comment>用户ID</Comment>
+      <DataType>int(11) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="542" parent="38" name="NAME">
+      <Position>2</Position>
+      <Comment>用户姓名</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="543" parent="38" name="LOGIN_NAME">
+      <Position>3</Position>
+      <Comment>用户登陆名</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="544" parent="38" name="MD5_PASSWORD">
+      <Position>4</Position>
+      <Comment>用户密码</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="545" parent="38" name="WORKER_NUMBER">
+      <Position>5</Position>
+      <Comment>工号</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="546" parent="38" name="EMAIL">
+      <Position>6</Position>
+      <Comment>用户邮箱</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="547" parent="38" name="PHONE">
+      <Position>7</Position>
+      <Comment>用户手机</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="548" parent="38" name="REG_TIME">
+      <Position>8</Position>
+      <Comment>注册时间</Comment>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="549" parent="38" name="ALLOWED_LOGIN">
+      <Position>9</Position>
+      <Comment>允许登陆</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="550" parent="38" name="REMARK">
+      <Position>10</Position>
+      <Comment>备注</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="551" parent="38" name="CREATOR">
+      <Position>11</Position>
+      <Comment>创建人</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="552" parent="38" name="TYPE">
+      <Position>12</Position>
+      <Comment>用户类型(0-普通, 1-管理员)</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <index id="553" parent="38" name="LOGIN_NAME">
+      <ColNames>LOGIN_NAME</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="554" parent="38" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="555" parent="38" name="LOGIN_NAME">
+      <ColNames>LOGIN_NAME</ColNames>
+      <UnderlyingIndexName>LOGIN_NAME</UnderlyingIndexName>
+    </key>
+    <column id="556" parent="39" name="USER_ID">
+      <Position>1</Position>
+      <Comment>用户ID</Comment>
+      <DataType>int(11) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="557" parent="39" name="DEPARTMENT_ID">
+      <Position>2</Position>
+      <Comment>组织ID</Comment>
+      <DataType>int(11) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="558" parent="39" name="DEPARTMENT_ID">
+      <ColNames>DEPARTMENT_ID</ColNames>
+    </index>
+    <index id="559" parent="39" name="USER_ID">
+      <ColNames>USER_ID
+DEPARTMENT_ID</ColNames>
+    </index>
+    <foreign-key id="560" parent="39" name="user_department_mapping_ibfk_1">
+      <ColNames>USER_ID</ColNames>
+      <RefSchemaName>crm</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>ID</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="561" parent="39" name="user_department_mapping_ibfk_2">
+      <ColNames>DEPARTMENT_ID</ColNames>
+      <RefSchemaName>crm</RefSchemaName>
+      <RefTableName>department</RefTableName>
+      <RefColNames>ID</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="562" parent="40" name="USER_ID">
+      <Position>1</Position>
+      <Comment>用户ID</Comment>
+      <DataType>int(11) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="563" parent="40" name="ROLE_ID">
+      <Position>2</Position>
+      <Comment>角色ID</Comment>
+      <DataType>int(11) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="564" parent="40" name="ROLE_ID">
+      <ColNames>ROLE_ID</ColNames>
+    </index>
+    <index id="565" parent="40" name="USER_ID">
+      <ColNames>USER_ID
+ROLE_ID</ColNames>
+    </index>
+    <foreign-key id="566" parent="40" name="user_role_mapping_ibfk_1">
+      <ColNames>USER_ID</ColNames>
+      <RefSchemaName>crm</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>ID</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="567" parent="40" name="user_role_mapping_ibfk_2">
+      <ColNames>ROLE_ID</ColNames>
+      <RefSchemaName>crm</RefSchemaName>
+      <RefTableName>role</RefTableName>
+      <RefColNames>ID</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="568" parent="41" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="569" parent="41" name="user_name">
+      <Position>2</Position>
+      <DataType>varchar(40)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="570" parent="41" name="password">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="571" parent="41" name="age">
+      <Position>4</Position>
+      <DataType>int(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="572" parent="41" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
